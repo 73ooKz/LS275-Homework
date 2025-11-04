@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ใช้งาน Grid-template-areas</title>
+        <link rel="stylesheet" href="store.css">
+        <style>
+                .item-H {
+                        grid-area: header;
+                        height: 70px;
+                }
+
+                .item-L {
+                        grid-area: lside;
+                        height: 920px;
+                }
+
+                .item-M {
+                        grid-area: main;
+                        height: 920px;
+                }
+
+                .item-F {
+                        grid-area: footer;
+                        height: 70px;
+                }
+
+                .gridcontainer {
+                        display: grid;
+                        grid-template-areas:
+                                'header header header header header'
+                                'lside main main main main'
+                                'footer footer footer footer footer';
+                        background-color: #FFF9C4;
+                        grid-gap: 5px;
+                        padding: 10px;
+                }
+
+                .item {
+                        background-color:#FFFFFF;
+
+                        padding: 30px;
+                        font-size: 20px;
+
+                }
+
+                .price {
+                        background-color: #FFB300;
+                        border: 2px solid red;
+                        box-sizing: border-box;
+                        padding: 5px;
+                        margin: 5px;
+                        font-size: 20px;
+                        width: 120px;
+                        display: flex;
+                        justify-content: center;
+                }
+        </style>
+</head>
+
+<body>
+
+        <div class="gridcontainer">
+                <div class="item-H header center"><img src="Image/CheapStore logo2.png" alt="CheapStoreLOGO"></div>
+                <div class="item-L item">
+                        <li><a href="register.html">สมัครสมาชิกที่นี่</a> </li>
+                </div>
+                <div class="item-M item">
+                        <form action="https://httpbin.org/post" method="POST">
+                                <h3 class="center" style="color: #2B2B2F;">โปรดเลือกสินค้าและจำนวนที่ต้องการ</h3>
+                                <div class="product">
+                                        <input type="checkbox" id="Dairy" name="DutchMill" value="Dairy">
+                                        <label for="Dairy">ดัชมิลล์ ซีเล็คเต็ด น้ำนมโคยูเอชที รสจืด 180 มล. แพ็คละ 4
+                                                ชิ้น</label><br>
+                                        <div class="price" style="flex-shrink: 10;"> 39 บาท </div>
+                                        <img src="Image/DutchMill.jpg" width="20%">
+                                        <input type="number" name="Dairy" min="1" max="99"  placeholder="จำนวน">
+                                </div><hr>
+
+
+                                <div class="product">
+                                        <input type="checkbox" id="BSoy" name="Dina" value="BSoy">
+                                        <label for="BSoy">ดีน่า แบล็ค ไฮโปรตีน นมถั่วเหลืองยูเอชที ผสมถั่วเหลืองสีดำ เจ
+                                                230 มล. แพ็คละ 3 ชิ้น</label><br>
+                                        <div class="price" style="flex-shrink: 10;"> 37 บาท </div>
+                                        <img src="Image/Dina.jpg" width="20%">
+                                        <input type="number" name="BSoy" min="1" max="99" placeholder="จำนวน">
+                                </div><hr>
+
+                                <div class="product">
+                                        <input type="checkbox" id="Whey" name="Meji" value="Whey">
+                                        <label for="Whey">เมจิ ไฮโปรตีน สูตรเวย์ ไม่เติมน้ำตาลทราย รสช็อคโกแลต
+                                        </label><br>
+                                        <div class="price" style="flex-shrink: 10;"> 45 บาท </div>
+                                        <img src="Image/Whey.png" width="20%">
+                                        <input type="number" name="BSoy" min="1" max="99" placeholder="จำนวน">
+                                </div><hr>
+
+                                <input type="submit" value="ส่งข้อมูล">
+                </div>
+                <div class="item-F  center footer">
+                        <address> 80/26 ต.ตลาด อ.เมืองฯ จ.สุราษฎร์ธานี 84000
+                                <address>โทรศัพท์ 096-800-2675
+                                        <address>LINE @CHEAPSTORE</address>
+                </div>
+        </div>
+        </form>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+.center {
+    text-align: center;
+}
+
+.header {
+  background-color: #1F3A63;
+  color: #FFFFFF;
+   padding: 30px;
+font-size: 20px;
+}
+
+.LF {
+  background-color: #F5F5F5;
+  color: #FFFFFF;
+   padding: 30px;
+font-size: 20px;
+}
+
+
+.footer{
+    background-color: #1F3A63;
+    color: azure;
+     padding: 30px;
+    font-size: 20px;
+}

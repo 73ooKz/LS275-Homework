@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="store.css">
+    <style>
+        .item-H {
+            grid-area: header;
+            height: 70px;
+            
+        }
+
+        .item-L {
+            grid-area: lside;
+            height: 700px;
+            width: 130px;
+        }
+
+        .item-M {
+            grid-area: main;
+            height: 700px;
+            width: 975px;
+        }
+
+        .item-F {
+            grid-area: footer;
+            height: 70px;
+        }
+
+        .gridcontainer {
+            display: grid;
+            grid-template-areas:
+                'header header header header header'
+                'lside main main main main'
+                'footer footer footer footer footer';
+            background-color: #FFF9C4;
+            grid-gap: 5px;
+            padding: 10px;
+        }
+
+        .item {
+            background-color: #FFFFFF;
+            padding: 30px;
+            font-size: 20px;
+           
+        }
+
+        .form-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 20px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="gridcontainer">
+        <div class="item-H center header"><img src="Image/CheapStore logo2.png" alt="CheapStoreLOGO"></div>
+        <div class="item-L item">
+            <li><a href="index.html"> ซื้อสินค้าที่นี่</a> </li>
+        </div>
+        <div class="item-M item">
+            <form action="https://httpbin.org/post" method="POST">
+                <h2 class="center" style="color: #2B2B2F;":>สมัครสมาชิก</h2>
+                <h3 class="center" style="color: #2B2B2F;">โปรดกรอกรายละเอียดดังต่อไปนี้</h3>
+
+                <label for="firstname">ชื่อจริง</label><br>
+                <input type="text" id="firstname" name="firstname"><br>
+
+
+                <label for="lastname">นามสกุล</label><br>
+                <input type="text" id="lastname" name="lastname"><br><hr>
+
+
+                <label for="gender">เพศ</label><br>
+                <select id="gender" name="gender">
+                    <option value="Male">ชาย</option>
+                    <option value="Female">หญิง</option>
+                    <option value="Non-gender">ไม่ระบุเพศ</option>
+                    </select><hr>
+                
+
+
+                <label for="BD">วันเกิด</label><br>
+                <input type="date" id="BD" name="BD"><br>
+                <hr>
+
+                <label for="tellno">เบอร์โทรศัพท์</label><br>
+                <input type="tel" id="tellno" name="tellno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+
+                <label for="email">email address</label><br>
+                <input type="email" id="email" name="email_address"><br><hr>
+
+
+
+                <h3>ที่อยู่สำหรับจัดส่งพัสดุ</h3>
+                <textarea id="uaddress" name="user_address" rows="3" cols="15">โปรดระบุที่อยู่</textarea>
+                <hr>
+
+                <input type="submit" value="ส่งข้อมูล">
+
+            </form>
+        </div>
+        <div class="item-F footer center">
+            <address> 80/26 ต.ตลาด อ.เมืองฯ จ.สุราษฎร์ธานี 84000
+                <address>โทรศัพท์ 096-800-2675
+                     <address>LINE @CHEAPSTORE</address>
+        </div>
+    </div>
+</body>
+
+</html>
